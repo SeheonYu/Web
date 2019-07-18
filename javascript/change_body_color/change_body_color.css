@@ -1,0 +1,37 @@
+body {
+  background: #5758bb;
+}
+
+.color_box {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  padding: 5px;
+  background: #f1f1f1;
+}
+.color_box a {
+  width: 40px;
+  height: 40px;
+  float: left;
+  color: #00000000;
+  margin: 5px;
+  cursor: pointer;
+}
+#red {
+  background: #ea2027;
+}
+#blue {
+  background: #0652dd;
+}
+#green {
+  background: #009432;
+}
+#black {
+  background: #1b1464;
+}
+#yellow {
+  background: #ffc312;
+}
+#orange {
+  background: #f79f1f;
+}
