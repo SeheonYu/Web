@@ -1,20 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  font-family: montserrat;
-  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(120deg, #3498db, #8e44ad);
+  background: linear-gradient(135deg, #a29bfe, #dfe6e9);
 }
 
-.login-form {
+.login_form {
   width: 360px;
   background: #f1f1f1;
-  height: 580px;
+  height: 480px;
   padding: 80px 40px;
   border-radius: 10px;
   position: absolute;
@@ -23,64 +20,63 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.login-form h1 {
+.login_form h1 {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.txtb {
+.input_box {
   border-bottom: 2px solid #adadad;
   position: relative;
   margin: 30px 0;
 }
 
-.txtb input {
+.input_box input {
   font-size: 15px;
   color: #333;
   border: none;
   width: 100%;
-  outline: none;
   background: none;
+  outline: none;
   padding: 0 5px;
   height: 40px;
 }
 
-.txtb span::before {
+.input_box span::before {
   content: attr(data-placeholder);
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: 5px;
   color: #adadad;
-  transform: translateY(-50%);
-  z-index: -1;
   transition: 0.5s;
 }
 
-.txtb span::after {
+.input_box span::after {
   content: "";
   position: absolute;
   width: 0%;
   height: 2px;
-  background: linear-gradient(120deg, #3498db, #8e44ad);
+  background: linear-gradient(135deg, #a29bfe, #dfe6e9);
   transition: 0.5s;
 }
 
 .focus + span::before {
   top: -5px;
   font-size: 13px;
-  color: #3498db;
+  color: #a29bfe;
 }
 
 .focus + span::after {
   width: 100%;
 }
 
-.logbtn {
+.login_btn {
   display: block;
   width: 100%;
   height: 50px;
   border: none;
-  background: linear-gradient(120deg, #3498db, #8e44ad, #3498db);
+  background: linear-gradient(135deg, #a29bfe, #dfe6e9);
   background-size: 200%;
   color: #fff;
   outline: none;
@@ -88,12 +84,22 @@ body {
   transition: 0.5s;
 }
 
-.logbtn:hover {
+.login_btn:hover {
   background-position: right;
 }
 
-.bottom-text {
+.bottom_text {
   margin-top: 60px;
   text-align: center;
   font-size: 13px;
+}
+
+.remember_me {
+  color: #a29bfe;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+
+.remember_me:hover {
+  color: #6c5ce7;
 }
