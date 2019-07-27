@@ -24,23 +24,24 @@
     <form action="#" class="login_form">
       <h1>Login</h1>
 
-      <div class="input_box">
+      <div class="input_box col-xs-12 col-sm-5">
         <input type="text" id="username" />
         <span data-placeholder="Username"></span>
       </div>
 
-      <div class="input_box">
+      <div class="input_box col-xs-12 col-sm-5">
         <input type="password" id="passwd" />
         <span data-placeholder="Password"></span>
       </div>
-      <input type="submit" value="Login" class="login_btn" />
+
+      <input type="submit" value="Login" class="login_btn col-xs-12 col-sm-2" />
 
       <label class="remember_me"
         ><i class="far fa-circle"></i> Remember me</label
       >
-
-      <div class="bottom_text">Don't have account? <a href="#">Sign up</a></div>
     </form>
+
+    <div class="bottom_text">Don't have account? <a href="#">Sign up</a></div>
 
     <script type="text/javascript">
       $(".input_box input").on("focus", function() {
