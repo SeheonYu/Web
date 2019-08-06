@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="login_form.css" />
-    <script src="https://kit.fontawesome.com/caa9be95ad.js"></script>
+		<link rel="stylesheet" href="login_form.css" />
+		<script src="https://kit.fontawesome.com/caa9be95ad.js"></script>
 
-    <title>Login Page</title>
-  </head>
-  <body>
-    <form action="#" class="login_form">
-      <h1>Login</h1>
+		<title>로그인</title>
+	</head>
+	<body>
+		<form action="#" class="login_form">
+			<h1>Sign in</h1>
 
-      <div class="input_box col-xs-12 col-sm-5">
-        <input type="text" id="username" />
-        <span data-placeholder="Username"></span>
-      </div>
+			<div class="input_box">
+				<input type="text" id="username" />
+				<span data-placeholder="Username"></span>
+			</div>
 
-      <div class="input_box col-xs-12 col-sm-5">
-        <input type="password" id="passwd" />
-        <span data-placeholder="Password"></span>
-      </div>
+			<div class="input_box">
+				<input type="password" id="passwd" />
+				<span data-placeholder="Password"></span>
+			</div>
 
-      <input type="submit" value="Login" class="login_btn col-xs-12 col-sm-2" />
+			<input type="submit" value="Login" class="login_btn" />
 
-      <label class="remember_me"
-        ><i class="far fa-circle"></i> Remember me</label
-      >
-    </form>
+			<label class="remember_me"
+				><i class="far fa-circle"></i> Remember me</label
+			>
 
-    <div class="bottom_text">Don't have account? <a href="#">Sign up</a></div>
+			<div class="bottom_text">Don't have account? <a href="#">Sign up</a></div>
+		</form>
 
-    <script type="text/javascript">
-      $(".input_box input").on("focus", function() {
-        $(this).addClass("focus");
-      });
-      $(".input_box input").on("blur", function() {
-        if ($(this).val() == "") $(this).removeClass("focus");
-      });
+		<script type="text/javascript">
+			function go_page(str) {
+				location.replace(str);
+			}
 
-      $(".remember_me").click(function() {
-        if ($("svg").attr("data-icon") == "circle")
-          $("svg").attr("data-icon", "check-circle");
-        else $("svg").attr("data-icon", "circle");
-      });
-    </script>
-  </body>
+			$(".input_box input").on("focus", function() {
+				$(this).addClass("focus");
+			});
+			$(".input_box input").on("blur", function() {
+				if ($(this).val() == "") $(this).removeClass("focus");
+			});
+
+			$(".remember_me").click(function() {
+				if ($("svg").attr("data-icon") == "circle")
+					$("svg").attr("data-icon", "check-circle");
+				else $("svg").attr("data-icon", "circle");
+			});
+
+			$(".login_btn").on("click", function() {
+				if ($("#username").val() == "") {
+					alert("아이디를 입력하세요");
+					$("#username").focus();
+				} else if ($("#passwd").val() == "") {
+					alert("비밀번호를 입력하세요");
+					$("#passwd").focus();
+				} else if ($("#username").val() == "seheon") {
+					if ($("#passwd").val() == "testpasswd") {
+						alert("로그인되었습니다.");
+						go_page(
+							"http://127.0.0.1:5500/web/comminuty_board/community_board.html"
+						);
+					} else {
+						alert("로그인 실패");
+					}
+				}
+			});
+		</script>
+	</body>
 </html>
