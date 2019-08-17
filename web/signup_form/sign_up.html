@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="sign_up.css" />
+		<script src="https://kit.fontawesome.com/caa9be95ad.js"></script>
+		<title>Sign up</title>
+	</head>
+	<body>
+		<form action="#" class="signup_form">
+			<h1>Sign up</h1>
+
+			<div class="input_box">
+				<input type="text" id="id" />
+				<span data-placeholder="ID"></span>
+			</div>
+
+			<div class="input_box">
+				<input type="password" id="pswd" />
+				<span data-placeholder="Password"></span>
+			</div>
+
+			<div class="input_box">
+				<input type="password" id="pswd_confirm" />
+				<span data-placeholder="Password Confirm"></span>
+			</div>
+
+			<div class="input_box">
+				<input type="text" id="name" />
+				<span data-placeholder="Name"></span>
+			</div>
+
+			<div class="birth_box">
+				<div class="birth_input">
+					<div class="input_box">
+						<input type="text" id="birth_yy" />
+						<span data-placeholder="Year"></span>
+					</div>
+				</div>
+
+				<div class="birth_input">
+					<div class="input_box">
+						<input type="text" id="birth_mm" />
+						<span data-placeholder="Month"></span>
+					</div>
+				</div>
+
+				<div class="birth_input">
+					<div class="input_box">
+						<input type="text" id="birth_dd" />
+						<span data-placeholder="Day"></span>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<script type="text/javascript">
+			$(".input_box input").on("focus", function() {
+				$(this).addClass("focus");
+			});
+
+			$(".input_box input").on("blur", function() {
+				if ($(this).val() == "") $(this).removeClass("focus");
+			});
+		</script>
+	</body>
+</html>

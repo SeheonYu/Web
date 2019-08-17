@@ -1,0 +1,120 @@
+body {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #a29bfe, #dfe6e9);
+}
+
+.signup_form {
+	width: 360px;
+	background: #f1f1f1;
+	height: 480px;
+	padding: 80px 30px;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signup_form h1 {
+	text-align: center;
+	margin-bottom: 60px;
+
+	font-weight: 600;
+}
+
+.birth_box {
+	padding: 0;
+	margin: 0;
+}
+
+.birth_input {
+	display: inline-block;
+	width: 30%;
+	height: 40px;
+
+	background: #6c5ce7;
+}
+
+.input_box {
+	border-bottom: 2px solid #adadad;
+	position: relative;
+	margin: 30px 0;
+}
+
+.input_box input {
+	font-size: 15px;
+	color: #333;
+	border: none;
+	width: 100%;
+	background: none;
+	outline: none;
+	padding: 0 5px;
+	height: 40px;
+}
+
+.input_box span::before {
+	content: attr(data-placeholder);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5px;
+	color: #adadad;
+	transition: 0.5s;
+	z-index: -1;
+}
+
+.input_box span::after {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(135deg, #a29bfe, #dfe6e9);
+	transition: 0.5s;
+}
+
+.focus + span::before {
+	top: -5px;
+	font-size: 13px;
+	color: #a29bfe;
+}
+
+.focus + span::after {
+	width: 100%;
+}
+
+.login_btn {
+	display: block;
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 5px;
+	background: linear-gradient(135deg, #a29bfe, #dfe6e9);
+	background-size: 200%;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	transition: 0.5s;
+
+	margin-bottom: 10px;
+}
+
+.login_btn:hover {
+	background-position: right;
+}
+
+.bottom_text {
+	margin-top: 60px;
+	text-align: center;
+	font-size: 13px;
+
+	font-weight: 100;
+}
+
+.remember_me {
+	color: #a29bfe;
+	transition: 0.5s;
+}
+
+.remember_me:hover {
+	color: #6c5ce7;
+}

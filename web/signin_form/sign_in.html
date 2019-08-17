@@ -10,13 +10,13 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-		<link rel="stylesheet" href="login_form.css" />
+		<link rel="stylesheet" href="sign_in.css" />
 		<script src="https://kit.fontawesome.com/caa9be95ad.js"></script>
 
-		<title>로그인</title>
+		<title>Sign in</title>
 	</head>
 	<body>
-		<form action="#" class="login_form">
+		<form action="#" class="signin_form">
 			<h1>Sign in</h1>
 
 			<div class="input_box">
@@ -46,6 +46,7 @@
 			$(".input_box input").on("focus", function() {
 				$(this).addClass("focus");
 			});
+
 			$(".input_box input").on("blur", function() {
 				if ($(this).val() == "") $(this).removeClass("focus");
 			});
@@ -71,8 +72,21 @@
 						);
 					} else {
 						alert("로그인 실패");
+						$("#passwd").val("");
+						$("#passwd").focus();
 					}
+				} else {
+					alert("로그인 실패");
+					$("#username").val("");
+					$("#passwd").val("");
+					$("#passwd").trigger("blur");
+					$("#username").focus();
 				}
+			});
+
+			$(document).ready(function() {
+				$("#username").val("");
+				$("#passwd").val("");
 			});
 		</script>
 	</body>
