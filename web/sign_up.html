@@ -19,8 +19,13 @@
 			<h1>Sign up</h1>
 
 			<div class="input_box">
-				<input type="text" id="id" />
-				<span data-placeholder="ID"></span>
+				<input type="text" id="email" />
+				<span data-placeholder="Email"></span>
+			</div>
+
+			<div class="input_box">
+				<input type="text" id="nickname" />
+				<span data-placeholder="Nick name"></span>
 			</div>
 
 			<div class="input_box">
@@ -29,36 +34,18 @@
 			</div>
 
 			<div class="input_box">
-				<input type="password" id="pswd_confirm" />
-				<span data-placeholder="Password Confirm"></span>
+				<input type="password" id="pswd_check" />
+				<span data-placeholder="Re-enter Password"></span>
 			</div>
 
 			<div class="input_box">
 				<input type="text" id="name" />
-				<span data-placeholder="Name"></span>
+				<span data-placeholder="Your name"></span>
 			</div>
 
-			<div class="birth_box">
-				<div class="birth_input">
-					<div class="input_box">
-						<input type="text" id="birth_yy" />
-						<span data-placeholder="Year"></span>
-					</div>
-				</div>
-
-				<div class="birth_input">
-					<div class="input_box">
-						<input type="text" id="birth_mm" />
-						<span data-placeholder="Month"></span>
-					</div>
-				</div>
-
-				<div class="birth_input">
-					<div class="input_box">
-						<input type="text" id="birth_dd" />
-						<span data-placeholder="Day"></span>
-					</div>
-				</div>
+			<div class="button_box">
+				<input type="submit" value="Sign up" class="signup_btn" />
+				<input type="button" value="Cancle" class="cancle_btn" />
 			</div>
 		</form>
 
@@ -69,6 +56,10 @@
 
 			$(".input_box input").on("blur", function() {
 				if ($(this).val() == "") $(this).removeClass("focus");
+			});
+
+			$(".cancle_btn").on("click", function() {
+				window.history.back();
 			});
 		</script>
 	</body>
